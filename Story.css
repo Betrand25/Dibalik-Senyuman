@@ -1,0 +1,623 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
+  /* overflow-y: scroll; */
+}
+
+
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
+
+/* Header Start*/
+
+#navbar{
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+
+    
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    margin-top: 20px;
+
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 350;
+    color: white;
+    background-repeat: no-repeat;
+    padding: 0px 160px 30px 20px;
+    margin-left: 1px;
+    font-family:Courier;
+}
+
+#navbar .storyNa{
+  color:  #800000;
+}
+
+#navbar li a:hover{
+  color: #b41515;
+}
+
+
+/* Header background (Story) */
+#header{
+    background-image: url("Foto/StoryBackGround.png");
+    height: 800px;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+
+}
+
+#header div {
+  width: 100%; 
+}
+
+
+/* mainStory */
+@font-face {
+    font-family: 'MyCustomFont2';
+    src: url('font/CorrectionTape.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Perandory SemCond";
+    src: url("https://db.onlinewebfonts.com/t/5ac189e6b7e50d7c979f440ebe12e278.eot");
+    src: url("https://db.onlinewebfonts.com/t/5ac189e6b7e50d7c979f440ebe12e278.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/5ac189e6b7e50d7c979f440ebe12e278.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/5ac189e6b7e50d7c979f440ebe12e278.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/5ac189e6b7e50d7c979f440ebe12e278.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/5ac189e6b7e50d7c979f440ebe12e278.svg#Perandory SemCond")format("svg");
+}
+
+#container{
+    background-color: #DDDCDA;
+    height:110vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.left-panel h1{
+    font-family: MyCustomFont2;
+    color: #590202;
+    font-size: 100PX;
+}
+
+.release-date{
+    margin-top: 10px;
+    font-family: Times New Roman;
+    font-size: 20px;
+    color: #2E2E2E;
+}
+
+.left-panel h4{
+    font-family: Perandory SemCond;
+    color: #2E2E2E;
+    font-size: 80px;
+}
+
+.left-panel h2{
+    font-family: Perandory SemCond;
+    color: #590202;
+    font-size: 160px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    margin-left: 30px;
+    background-color: transparent;
+}
+
+.left-panel h2:hover {
+    color: #2E2E2E; 
+    background-color: transparent;
+}
+
+a{
+background-color: transparent;
+text-decoration: none;
+}
+/* TopLine Section */
+#top-line{
+    background-color: #DDDCDA ;
+    width: 100%;
+    display: flex;
+}
+
+.top-line {
+    width: 1330px;        
+    height: 1px;        
+    border-top: 4px solid #474242 ; 
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 70px;    
+}
+
+/* Second TopLine */
+#top-line2{
+    background-color: #DDDCDA ;
+    width: 100%;
+    display: flex;
+}
+.top-line2 {     
+    width: 1330px;        
+    height: 1px;        
+    border-top: 4px solid #474242 ; 
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 70px;
+}
+
+/* Third TopLine */
+#top-line3{
+    background-color:#DDDCDA  ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.top-line3 {     
+    width: 1330px;        
+    height: 1px;        
+    border-top: 10px solid #474242 ; 
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.top-line4 {     
+    width: 1330px;        
+    height: 1px;        
+    border-top: 4px solid #474242 ; 
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.number p{
+    /* font-style: italic; */
+    font-size: 20px;
+    font-family: Perandory SemCond;
+    color: #2E2E2E;
+    text-align: right;
+    margin-right: 50px;
+    margin-top: 2px;
+}
+
+.garis1{
+    border-top: 5px solid #474242 ; 
+    height: 0; 
+    width: 500px;
+    margin-top: 40px; 
+    margin-left: 70px;
+  }
+
+.garis2{
+    border-top: 5px solid #474242 ; 
+    height: 0; 
+    width: 500px;
+    margin-top: 1px; 
+    margin-left: 70px;
+  }
+
+  .garis3{
+    border-top: 5px solid #474242 ; 
+    height: 0; 
+    width: 500px;
+    margin-top: 18px; 
+    margin-left: 70px;
+  }
+
+  .garis4{
+    border-top: 5px solid #474242 ; 
+    height: 0; 
+    width: 600px;
+    margin-top: 18px; 
+    margin-left: 10px;
+  }
+
+
+  .vertical-line {
+    width: 3px; 
+    background-color:  #474242 ; 
+    height: 100%; 
+    margin-bottom: 60px;
+}
+
+
+  .cast{
+    font-family: Times New Roman;
+    font-size: 20px;
+    color: #2E2E2E;
+  }
+
+  .cast-list {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%;
+}
+
+.actor-row {
+    display: flex;
+    justify-content: center; 
+    width: 100%; 
+    margin-bottom: 5px; 
+    margin-left: 50px;
+}
+
+.actor {
+    display: flex; 
+    margin-right: 20px; 
+}
+
+.name{
+    font-family: Perandory SemCond;
+    color: #2E2E2E;
+    font-size: 50px;
+}
+
+.role{
+    font-family: Perandory SemCond;
+    color: #2E2E2E;
+    font-size: 20px;
+}
+
+.name, .role {
+    margin-right: 1px; 
+}
+
+.role {
+    font-style: italic;
+    font-weight: bold;
+    color: #555;
+}
+
+
+.left-panel, .right-panel {
+    padding: 20px;
+    flex: 1;
+}
+
+.left-panel {
+    text-align: center;
+    padding: 40px;
+   
+}
+
+.right-panel {
+    padding: 40px;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+h1, h2, p {
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-style: italic;
+    text-align: center;
+    font-family: Times New Roman;
+    font-size: 25px;
+    color: #590202;
+}
+
+.quote-description {
+    font-size: 15px;
+    font-family: Crimson Pro;
+    text-align: justify;
+    color: rgb(19, 19, 19);
+}
+
+img {
+    width: 70%;
+    height: 30%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.image-text-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+.image-text-container img {
+    max-width: 50%;
+    height: auto; 
+    margin-right: 20px; 
+}
+
+.title{
+    text-align: center;
+    font-family: Times New Roman;
+    font-size: 25px;
+    color: #590202;
+}
+
+.image-text-container .image-caption {
+    flex: 1; 
+    text-align: left; 
+    font-size: 13px; 
+    font-family: Crimson Pro;
+    text-align: justify;
+    color: rgb(19, 19, 19);
+}
+
+/* Sastra */
+
+#Sastra{
+    background-color: #DDDCDA;
+    height:10vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.sastraText{
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    /* margin-top: 50px; */
+    font-family: Crimson Pro;
+    color: rgb(19, 19, 19);
+}
+
+.sastraText p{
+    font-family: Crimson Pro;
+    color: rgb(19, 19, 19);
+    font-size: 18px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/*Trailer  */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.4); 
+  justify-content: center; 
+  align-items: center;
+}
+
+.modal-content {
+  background-color:transparent;
+  margin: auto; 
+  padding: 20px;
+  width: 80%; 
+  text-align: center; 
+  position: relative;
+}
+
+.close-btn {
+  color: #680303;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.back-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  background-color: #590202;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  visibility: hidden; 
+}
+
+.back-btn:hover {
+  background-color: #800000;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+/* Footer */
+#footer {
+    background-color: #000000;
+    color: white;
+    text-align: left;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+    padding: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .footer-section h2 {
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-family:MyCustomFont;
+    color: #590202;
+  }
+  
+  .footer-section p,
+  .footer-section ul,
+  .footer-section form {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+    font-family:Courier;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li a {
+    color:#ffffff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+    font-family:Courier;
+    font-size: 20px;
+  }
+  
+  .footer-section ul li a:hover {
+    color:#590202;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  
+  .footer-bottom .socials a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #c2c2c2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    color: #590202;
+  }
+  
+  .footer-bottom .socials a:hover {
+    background-color: #000000;
+    color: white;
+  }
+  
+  .footer-bottom .socials {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 10px;
+  }
+  
+  .footer-section form input,
+  .footer-section form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .footer-section form button {
+    background-color: #590202;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .footer-section form button:hover {
+    background-color: #800000;
+  }
+  

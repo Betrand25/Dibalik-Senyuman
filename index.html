@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibalik Senyuman(Home)</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="Home.css">
+    <script src="Validasi.js" defer></script>
+    <script src="POPUP.JS" defer></script>
+</head>
+<link href='https://fonts.googleapis.com/css?family=Zen Tokyo Zoo' rel='stylesheet'>
+<body>
+    <div class="overlay" id="overlay"></div>
+    <section id="header">
+        <div>
+            <ul id="navbar">
+                <li><a class="homeNa" href="">Home</a></li>
+                <li><a class="storyNa" href="Story.html">Story</a></li>
+                <li><a class="trailerNa" href="Review.html">Review</a></li>
+                <li><a class="castNa" href="Cast.html">Cast</a></li>
+            </ul>
+        </div>
+        <div>
+            <a class="watch" href="#popup" onclick="openPopup();">Watch Now</a>
+        </div>
+    </section>
+
+    <div class="movie-popup" id="popup">
+        <div class="popup__content">
+            <div class="movie-body">
+                <div class="movie-video">
+                    <div class="Judul">
+                        <h2 class="balik">DIBALIK</h2>
+                        <h2 class="senyum">SENYUMAN</h2>
+                    </div>
+                    <video id="MovieBackground" loop>
+                        <source src="Video/Trailer.mp4" type="video/mp4">
+                    </video>
+                    <div class="ikon"> 
+                        <button class="icon-like" aria-label="Like" id="likeButton">
+                            <i class="fas fa-thumbs-up"></i>
+                            <i class="fas fa-thumbs-down dislike-icon" style="display: none;"></i>
+                        </button>
+                        <button class="icon-send" aria-label="Share">
+                            <i class="fas fa-share"></i>
+                        </button>
+                    </div>
+                    <button class="play-button" id="playButton">
+                        <i class="fas fa-play"></i>
+                        Play
+                    </button>
+                    <div class="movie-header">
+                        <a href="#" class="close" onclick="closePopup();">&times;</a>
+                    </div>
+                </div>
+                <div class="movie-info">
+                    <div class="Download">
+                        <button class="Download-button">
+                            <i class="fas fa-download"></i>
+                            Download
+                        </button>
+                    </div>
+                    <div class="trailer">
+                        <button class="Trailer-button" id="watchTrailerButton">
+                            <i class="fas fa-play"></i>
+                            Watch Trailer
+                        </button>
+                    </div>
+                    <div class="movie-stats">
+                        <span class="match">100% Match</span>
+                        <span class="year">10m</span>
+                        <span class="age-rating">13+ 2024| violence, language</span>
+                    </div>
+                    <div class="movie-description">
+                        Berkisah tentang Arya, seorang introvert yang kesepian, yang berteman dengan Jordi, seorang ekstrovert yang tampaknya ceria. Keduanya berbagi kehidupan pribadi mereka, namun di balik senyuman Jordi, dia mengalami kesulitan finansial dan masalah keluarga yang serius. Tragisnya, Arya menemukan bahwa Jordi telah mengakhiri hidupnya sendiri, meninggalkan pelajaran penting tentang pentingnya memperhatikan kesehatan mental orang-orang di sekitar kita.
+                    </div>
+                    <div class="movie-cast">Pemeran: Pearleen Pundarika Tjuatja & Aileen Philena</div>
+                    <div class="movie-genres">Genre: Social Drama</div>
+                    <div class="movie-rating">Film ini: Drama</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video full screen -->
+    <div id="fullScreenVideoContainer" style="display: none;">
+        <video id="fullScreenVideo" controls>
+            <source src="Video/FullMovie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="back-button" id="backButton">
+            <i class="fas fa-arrow-left"></i> Back
+        </button>
+    </div>
+
+    <section id="motivation">
+        <div>
+            <h4>"Don't let a fake smile become your mask. The world needs you as you are, happy or sad"</h4>
+            <h4>Be genuine, because your honesty is much more valuable</h4>
+            <h4> than a false impression."</h4>
+        </div>  
+    </section>
+
+    <section id="scene">
+        <h2>Memory</h2>
+        <div class="wrapper">
+            <div class="item"><img src="Foto/IMG_2006.PNG" alt=""></div>
+            <div class="item"><img src="Foto/IMG_2007.PNG" alt=""></div>
+            <div class="item"><img src="Foto/IMG_2008.PNG" alt=""></div>
+            <div class="item"><img src="Foto/IMG_2013.PNG" alt=""></div>
+            <div class="item"><img src="Foto/IMG_2014.PNG" alt=""></div>
+            <div class="item"><img src="Foto/IMG_2015.PNG" alt=""></div>
+        </div>
+    </section>
+
+    <section id="airin">
+        <h2>DIARY</h2>
+        <div class="garis-putih"></div>
+        <p></p>
+        <div class="container">
+            <div class="image">
+                <img src="Foto/Airin.png" alt="Gambar">
+            </div>
+            <div class="text">
+                <p>20 Desember 2023</p>
+                <p>Rasanya hidupku sudah hancur sehancurnya. Tidak ada lagi tempat
+                    untuku mencurahkan isi hatiku. Orang Tuaku cerai, mereka menjauhiku,
+                    Tak ada lagi yang mau dekat padaku. Hanya senyumanku yang dapat 
+                    menghiburku saja. Dibalik Senyumanku ada perih yang kupendam.
+                </p>
+                <p class="NamaAirin">Airin</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="jordy">
+        <div class="container2">
+            <div class="text2">
+                <p>02 January 2024</p>
+                <p>Aku Berharap ada yang datang dan mau duduk didekatku,
+                    dan menemaniku, untuk menjadi sahabatku. Aku Bukan seorang 
+                    yang kesepian. Kenapa Mereka menjauhiku ? Aku ingin bersama 
+                    mereka & kuingin seperi mereka
+                </p>
+                <p class="NamaJordy">Jordy</p>
+            </div>
+            <div class="image2">
+                <img src="Foto/Jordy.png" alt="Gambar2">
+            </div>
+        </div>
+        <div class="garis-putih"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Dibalik Senyuman adalah sebuah drama sosial yang menggali kedalaman emosi dan perjuangan manusia. Kami berdedikasi untuk membawa cerita yang menginspirasi dan menggugah.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Story.html">Story</a></li>
+                    <li><a href="Review.html">Review</a></li>
+                    <li><a href="#">Cast</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-form">
+                <h2>Contact Us</h2>
+                <form action="#">
+                    <input type="email" name="email" placeholder="Your email address" required>
+                    <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            &copy; dibaliksenyuman.com | Designed by Group 4
+        </div>
+    </footer>
+</body>
+</html>

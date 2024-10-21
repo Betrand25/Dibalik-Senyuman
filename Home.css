@@ -1,0 +1,846 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
+  /* overflow-y: scroll; */
+}
+
+
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
+
+
+/* Header Start*/
+
+#navbar{
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+
+    
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    margin-top: 20px;
+
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 350;
+    color: white;
+    background-repeat: no-repeat;
+    padding: 0px 160px 30px 20px;
+    margin-left: 1px;
+    font-family:Courier;
+}
+
+#navbar .homeNa{
+  color:  #800000;
+}
+
+#navbar li a:hover{
+  color: #b41515;
+}
+
+
+/* Header background */
+#header{
+    background-image: url("Foto/HomeBackGround.png");
+    height: 700px;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+
+}
+
+#header div {
+  width: 100%; 
+}
+
+#header a.watch {
+  color: white;
+  text-align: center; 
+  margin-bottom: 50px; 
+  margin-left: 500px;
+  width: 100%;
+  font-family: Courier;
+  font-size: 22px;
+  width: 180px;
+  height: 20px;
+  border-radius: 15px ;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 3px solid white;
+  display: inline-block;
+  padding-bottom: 30px;
+  text-decoration: none;
+  backdrop-filter: blur(8px)
+}
+
+#header a.watch:hover {
+  color: #800000;
+  background-color: black;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Atur tingkat kegelapan yang diinginkan */
+  z-index: 10; 
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.movie-popup {
+  width: 80%;
+  max-width: 800px;
+  background-color: transparent;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s .1s; 
+  z-index: 1000; 
+  margin-left: 300px;
+  display: none;
+  overflow-y: auto; 
+  overflow-y: hidden;
+  max-height: 100vh;
+}
+
+.popup__content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, dan Opera */
+}
+
+.popup__content{
+  width: 90%;
+  background-color: #181818;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+  max-width: 80%;
+  min-width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(.1);
+  opacity: 0;
+  transition: all .5s .2s;
+  overflow-y: scroll; 
+  max-height: 100vh;
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.movie-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5em;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 0;
+}
+
+.movie-body {
+  display: flex;
+  flex-direction: column;
+}
+
+#MovieBackground {
+  width: 100%;
+  height: 20%;
+  width: 100%;
+  height: auto; /* Sesuaikan ini jika video Anda memiliki tinggi tertentu */
+  z-index: 1;
+}
+
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: none;
+  padding: 5px 20px;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;;
+  width: 120px;
+  height: 30px;
+}
+
+.play-button:hover {
+  background-color: #000000; 
+  color: hsl(0, 100%, 100%);          
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+@font-face {
+  font-family: 'MyCustomFont2';
+  src: url('font/CorrectionTape.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.movie-video .Judul .senyum {
+  color: white;
+  font-family: MyCustomFont2;
+  color: #590202;
+  position: relative;
+  font-size: 45px;
+  left: 10px;
+}
+
+.movie-video .Judul .balik {
+  color: white;
+  font-family: MyCustomFont2;
+  color: #590202;
+  position: relative;
+  font-size: 45px;
+  left: 50px;
+}
+
+.Judul{
+  position: absolute;
+  top: 200px;
+}
+
+
+
+.play-button i {
+  margin-right: 10px; 
+  position: relative;
+}
+
+.ikon {
+  display: flex;
+  position: absolute;
+  gap: 18px; 
+  justify-content: center; 
+  top: 310PX;
+  left: 150PX;
+}
+
+.icon-like, .icon-send {
+  width: 30px; 
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;  
+  padding: 5px; 
+}
+
+ .icon-like:hover, .icon-send:hover {
+  transform: scale(1.1);
+  background-color: black;
+  color: white;
+}
+
+.Download-button {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: rgb(15, 15, 15);
+  background-color: #dbd6d6;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.Download-button i {
+  margin-right: 8px;
+}
+
+.Download-button:hover {
+  background-color: #797676;
+}
+
+
+
+
+.trailer {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.Trailer-button {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: #333;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.Trailer-button i {
+  margin-right: 8px;
+}
+
+.Trailer-button:hover {
+  background-color: #555;
+}
+
+
+
+
+.movie-info {
+  padding: 1em;
+}
+
+.movie-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.movie-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+.match {
+  background-color: #46d369;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-size: 0.8em;
+}
+
+.year, .length, .age-rating {
+  font-size: 0.8em;
+}
+
+.movie-description, .movie-cast, .movie-genres, .movie-rating {
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  color: #bbb;
+}
+
+.movie-cast, .movie-genres, .movie-rating {
+  border-top: 1px solid #333;
+  padding-top: 0.5em;
+}
+
+#popup:target{
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+#popup:target .popup__content{
+  transform: translate(-50%, -50%) scale(1); 
+  opacity: 1;
+  visibility: visible;
+}
+
+.close:link,
+.close:visited{
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 17px;
+  display: inline-block;
+  line-height: 30px;
+  transition: all .3s;
+  width: 25px; 
+  height: 25px; 
+  border-radius: 50%; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  cursor: pointer;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+#popup:target {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+#popup:target ~ .no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+.full-screen-video {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-screen-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.back-button i {
+  font-size: 20px;
+}
+
+
+#fullScreenVideoContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#fullScreenVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+
+/* motivasi */
+#motivation{
+  background-color: black;
+  height: 140px;
+  width: 100%;
+  background-size: cover;
+  justify-content: center;
+  text-align: center;
+}
+
+#motivation h4{
+  padding-top: 15px;
+  color: white;
+  font-size: 17px;
+  font-family:Courier;
+  padding-top: 20px;
+}
+
+/*wrapper */
+#scene{
+  background-color: black;
+  /* height: 100px; */
+  /* width: 100%; */
+  background-size: cover;
+  justify-content: center;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('font/CorrectionTape.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#scene h2{
+  color: white;
+  font-family:MyCustomFont;
+  color: #590202;
+}
+
+#scene .wrapper{
+  display: flex;
+  overflow: auto;
+  overflow-x: auto; 
+  white-space: nowrap; 
+}
+
+
+.wrapper::-webkit-scrollbar{
+  width: 0;
+  /* display:  none; */
+}
+
+.wrapper {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+.wrapper .item{
+  /* text-align: center; */
+  margin-right: 10px;
+}
+
+#scene .wrapper .item img {
+  width: 30vw;
+ height: 30vh;
+ max-width: 100%
+  height: auto; 
+}
+
+/* Airin */
+
+#airin {
+  background-color: #000000; 
+  padding: 40px; 
+  /* height: 1000px; */
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('font/CorrectionTape.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#airin h2{
+color: #590202;
+font-family: MyCustomFont;
+text-align: left;
+font-size: 70px;
+padding-left: 140px;
+
+}
+
+.garis-putih {
+  border-top: 1px solid white; /
+  height: 0; 
+  width: 1100px;
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+  margin-left: 100px;
+}
+
+.container {
+  display: flex; 
+  align-items: center; 
+  width: 1270px;
+  height: 300px;
+  justify-content: center;
+}
+
+.text p {
+  flex: 1;
+  padding-right: 20px; 
+  color: white;
+  font-size: 25px;
+  font-family:Courier;
+  text-align: left;
+  margin-right: 10px;
+  padding-left: 90px;
+  padding-right: 80px;
+}
+
+.text p .NamaAirin{
+  font-family: Courier;
+  color: white;
+  font size: 30px;
+  margin-right:100px;
+  padding-left: 90px;
+}
+
+.image {
+  flex: 1; 
+  text-align: left; 
+}
+
+.image img {
+  width: 300; 
+  height: 300px;
+  margin-left: 140px;
+}
+
+
+/*Jord Diary*/
+#jordy {
+  background-color: #000000; 
+  padding: 40px; 
+}
+
+.container2 {
+  display: flex; 
+  align-items: center; 
+  width: 1270px;
+  height: 300px;
+  justify-content: center;
+}
+
+.text2 p {
+  flex: 1;
+  padding-right: 20px; 
+  color: white;
+  font-size: 25px;
+  font-family:Courier;
+  text-align:right;
+  margin-right: 10px;
+  padding-left: 90px;
+  padding-right: 80px;
+}
+
+.text2 p .NamaJordy{
+  font-family: Courier;
+  color: white;
+  font size: 30px;
+  margin-right:100px;
+  padding-left: 90px;
+}
+
+.image2 {
+  flex: 1; 
+  text-align: left; 
+}
+
+.image2 img {
+  width: 300; 
+  height: 300px;
+  margin-right: 110px;
+}
+
+/* Footer */
+#footer {
+  background-color: #000000;
+  color: white;
+  text-align: left;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+  margin: 10px;
+}
+
+.footer-section h2 {
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-family:MyCustomFont;
+  color: #590202;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section form {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+  font-family:Courier;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color:#ffffff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+  font-family:Courier;
+  font-size: 20px;
+}
+
+.footer-section ul li a:hover {
+  color:#590202;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.footer-bottom .socials a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: #c2c2c2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  color: #590202;
+}
+
+.footer-bottom .socials a:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.footer-bottom .socials {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 10px;
+}
+
+.footer-section form input,
+.footer-section form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer-section form button {
+  background-color: #590202;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.footer-section form button:hover {
+  background-color: #800000;
+}
+
